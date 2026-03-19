@@ -1,0 +1,227 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+:root {
+  --radius: 0.75rem;
+  /* Page gradient: mostly black with a very subtle dark green hint at top */
+  --page-bg-start: #060E08;
+  --page-bg-end: #030503;
+
+  --background: oklch(0.08 0.012 155);
+  --foreground: oklch(0.95 0 0);
+  --card: oklch(0.11 0.01 155);
+  --card-foreground: oklch(0.95 0 0);
+  --popover: oklch(0.11 0.01 155);
+  --popover-foreground: oklch(0.95 0 0);
+  --primary: oklch(0.72 0.19 145);
+  --primary-foreground: oklch(0.08 0.012 155);
+  --secondary: oklch(0.15 0.01 155);
+  --secondary-foreground: oklch(0.95 0 0);
+  --muted: oklch(0.15 0.01 155);
+  --muted-foreground: oklch(0.58 0.02 155);
+  --accent: oklch(0.15 0.01 155);
+  --accent-foreground: oklch(0.95 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.2 0.015 155);
+  --input: oklch(0.2 0.015 155);
+  --ring: oklch(0.72 0.19 145);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    /* Uniform gradient: deep black base with a faint dark-green tint only at the very top */
+    background: linear-gradient(180deg, #071009 0%, #050C07 12%, #040804 25%, #030603 50%, #020402 100%);
+    background-attachment: fixed;
+    color: #F2EDE4;
+    min-height: 100vh;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+      max-width: 1100px;
+    }
+  }
+
+  /* ─── Green pill CTA button ─── */
+  .btn-green {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #22C55E;
+    color: #050D07;
+    font-weight: 700;
+    padding: 0.75rem 1.75rem;
+    border-radius: 9999px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, transform 0.15s, box-shadow 0.2s;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .btn-green:hover {
+    background-color: #16A34A;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 24px rgba(34,197,94,0.25);
+  }
+
+  /* ─── Section badge ─── */
+  .section-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.3rem 0.9rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(34,197,94,0.35);
+    background: rgba(34,197,94,0.08);
+    color: #22C55E;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  /* ─── Feature card with green top border ─── */
+  .feature-card {
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(34,197,94,0.12);
+    border-top: 2px solid #22C55E;
+    border-radius: 0.75rem;
+    padding: 1.75rem;
+    transition: background 0.2s, border-color 0.2s, transform 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .feature-card:hover {
+    background: rgba(34,197,94,0.04);
+    border-color: rgba(34,197,94,0.3);
+    transform: translateY(-2px);
+  }
+
+  /* ─── Step card ─── */
+  .step-card {
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(34,197,94,0.12);
+    border-top: 2px solid #22C55E;
+    border-radius: 0.75rem;
+    padding: 1.75rem;
+    backdrop-filter: blur(4px);
+    transition: background 0.2s;
+  }
+  .step-card:hover {
+    background: rgba(34,197,94,0.04);
+  }
+
+  /* ─── Section divider ─── */
+  .section-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(34,197,94,0.2), transparent);
+    border: none;
+    margin: 0;
+  }
+
+  /* ─── Shimmer button animations ─── */
+  @keyframes shimmer-slide {
+    to {
+      transform: translate(calc(100cqw - 100%), 0);
+    }
+  }
+  @keyframes spin-around {
+    0%   { transform: translateZ(0) rotate(0); }
+    15%, 35% { transform: translateZ(0) rotate(90deg); }
+    65%, 85% { transform: translateZ(0) rotate(270deg); }
+    100% { transform: translateZ(0) rotate(360deg); }
+  }
+  .animate-shimmer-slide {
+    animation: shimmer-slide var(--speed, 3s) ease-in-out infinite alternate;
+  }
+  .animate-spin-around {
+    animation: spin-around calc(var(--speed, 3s) * 2) infinite linear;
+  }
+
+  /* ─── Scroll reveal ─── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
