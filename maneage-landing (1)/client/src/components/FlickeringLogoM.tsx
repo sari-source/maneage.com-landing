@@ -30,9 +30,24 @@ export function FlickeringLogoM({ size }: { size?: number } = {}) {
         pointerEvents: "none",
         zIndex: 0,
         opacity: 0.30,
-        filter: "drop-shadow(0 0 80px rgba(34,197,94,0.45)) drop-shadow(0 0 160px rgba(34,197,94,0.2))",
+        // Removed highly expensive drop-shadow filter over CSS mask for performance
       }}
     >
+      {/* Ultra-fast static glowing orb behind the grid instead of dynamic mask drop-shadow */}
+      <div
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          width: "50%",
+          height: "50%",
+          background: "radial-gradient(ellipse at center, rgba(34,197,94,0.6) 0%, transparent 60%)",
+          filter: "blur(40px)",
+          opacity: 0.7,
+          zIndex: -1,
+        }}
+      />
       <div
         style={{
           WebkitMaskImage: `url('${LOGO_CDN}')`,
@@ -51,8 +66,8 @@ export function FlickeringLogoM({ size }: { size?: number } = {}) {
           color="#22C55E"
           maxOpacity={1}
           flickerChance={0.25}
-          squareSize={4}
-          gridGap={5}
+          squareSize={12} // Increased squareSize from 4 to 12 => drastically fewer nodes
+          gridGap={10}    // Increased gridGap from 5 to 10
           className="w-full h-full"
         />
       </div>

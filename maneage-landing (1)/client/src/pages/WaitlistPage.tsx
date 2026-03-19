@@ -18,19 +18,43 @@
 import { useState } from 'react';
 import { Link } from 'wouter';
 import { CheckCircle2, ArrowLeft } from 'lucide-react';
+import { supabase } from '../lib/supabase';
 
 export default function WaitlistPage() {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!email.includes('@') || !email.includes('.')) {
       setError('Please enter a valid email address.');
       return;
     }
     setError('');
+    setIsSubmitting(true);
+
+    if (supabase) {
+      const { error: supaError } = await supabase
+        .from('waitlist')
+        .insert([{ email }]);
+      
+      if (supaError) {
+        setIsSubmitting(false);
+        if (supaError.code === '23505') {
+          setError('This email is already on the waitlist.');
+        } else {
+          setError('Failed to join waitlist. Please try again.');
+          console.error(supaError);
+        }
+        return;
+      }
+    } else {
+      console.warn('Supabase client not initialized. Make sure VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY are set.');
+    }
+
+    setIsSubmitting(false);
     setSubmitted(true);
   }
 
@@ -281,34 +305,40 @@ export default function WaitlistPage() {
 
                 <button
                   type="submit"
+                  disabled={isSubmitting}
                   style={{
                     width: '100%',
                     padding: '0.9rem 1rem',
                     fontSize: '1rem',
                     fontWeight: 700,
                     fontFamily: 'DM Sans, sans-serif',
-                    background: '#22C55E',
+                    background: isSubmitting ? '#16a34a' : '#22C55E',
                     color: '#0A0A0A',
                     borderTop: 'none',
                     borderRight: 'none',
                     borderBottom: 'none',
                     borderLeft: 'none',
                     borderRadius: '10px',
-                    cursor: 'pointer',
+                    cursor: isSubmitting ? 'not-allowed' : 'pointer',
                     letterSpacing: '0.01em',
                     transition: 'background 0.2s, transform 0.1s',
                     boxShadow: '0 4px 20px rgba(34,197,94,0.35)',
+                    opacity: isSubmitting ? 0.7 : 1,
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.background = '#16a34a';
-                    e.currentTarget.style.transform = 'translateY(-1px)';
+                    if (!isSubmitting) {
+                      e.currentTarget.style.background = '#16a34a';
+                      e.currentTarget.style.transform = 'translateY(-1px)';
+                    }
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.background = '#22C55E';
-                    e.currentTarget.style.transform = 'translateY(0)';
+                    if (!isSubmitting) {
+                      e.currentTarget.style.background = '#22C55E';
+                      e.currentTarget.style.transform = 'translateY(0)';
+                    }
                   }}
                 >
-                  Get Early Access →
+                  {isSubmitting ? 'Joining...' : 'Get Early Access →'}
                 </button>
               </div>
 
