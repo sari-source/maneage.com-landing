@@ -4,11 +4,7 @@ import { ContainerScroll } from '@/components/ui/container-scroll-animation';
 import { ShimmerButton } from '@/components/ui/shimmer-button';
 import { FlickeringLogoM } from '@/components/FlickeringLogoM';
 
-const AVATARS = [
-  'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=64&h=64&fit=crop&crop=face',
-  'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=64&h=64&fit=crop&crop=face',
-  'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=64&h=64&fit=crop&crop=face',
-];
+
 
 export function HeroSection({ onWaitlistOpen, canAnimate }: { onWaitlistOpen?: () => void; canAnimate?: boolean } = {}) {
   return (
@@ -91,32 +87,7 @@ export function HeroSection({ onWaitlistOpen, canAnimate }: { onWaitlistOpen?: (
               </span>
             </div>
 
-            {/* Social proof */}
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem' }}>
-              <div style={{ display: 'flex' }}>
-                {AVATARS.map((src, i) => (
-                  <img
-                    key={i}
-                    src={src}
-                    alt="salon owner"
-                    style={{
-                      width: '36px',
-                      height: '36px',
-                      borderRadius: '50%',
-                      borderTop: '2px solid rgba(34,197,94,0.3)',
-                      borderRight: '2px solid rgba(34,197,94,0.3)',
-                      borderBottom: '2px solid rgba(34,197,94,0.3)',
-                      borderLeft: '2px solid rgba(34,197,94,0.3)',
-                      marginLeft: i === 0 ? 0 : '-10px',
-                      objectFit: 'cover',
-                    }}
-                  />
-                ))}
-              </div>
-              <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.875rem', color: 'rgba(242,237,228,0.7)' }}>
-                <strong style={{ color: '#F2EDE4' }}>500+</strong> salons already thriving
-              </span>
-            </div>
+
           </div>
         }
       >
