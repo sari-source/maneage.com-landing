@@ -4,7 +4,7 @@ import { HeroSection } from '@/components/HeroSection';
 import { VillainSection } from '@/components/VillainSection';
 import { SolutionSection } from '@/components/SolutionSection';
 import { ProcessSection } from '@/components/ProcessSection';
-import { TestimonialSection } from '@/components/TestimonialSection';
+
 import { PricingSection } from '@/components/PricingSection';
 import { WaitlistModal } from '@/components/WaitlistModal';
 
@@ -18,7 +18,7 @@ export default function Home() {
       <VillainSection />
       <SolutionSection />
       <ProcessSection />
-      <TestimonialSection />
+
       <PricingSection onWaitlistOpen={() => setWaitlistOpen(true)} />
       <WaitlistModal open={waitlistOpen} onClose={() => setWaitlistOpen(false)} />
     </div>

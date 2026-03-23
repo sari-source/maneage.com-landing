@@ -18,7 +18,7 @@ serve(async (req) => {
         'Authorization': `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: 'maneage.com <onboarding@resend.dev>', // Change to your verified domain later
+        from: 'maneage.com <no-reply@maneage.com>', // Change to your verified domain later
         to: [email],
         subject: "You’re on the list! (And your first 3 months are on us)",
         html: `
