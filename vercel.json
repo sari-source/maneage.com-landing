@@ -1,6 +1,6 @@
 {
   "name": "maneage-landing",
-  "buildCommand": "npm run build",
+  "buildCommand": "pnpm run build",
   "outputDirectory": "dist",
   "rewrites": [
     {
