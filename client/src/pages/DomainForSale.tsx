@@ -87,15 +87,22 @@ export default function DomainForSale() {
 
           <button 
             type="button"
-            onClick={() => {
-              // Copy to clipboard
-              navigator.clipboard.writeText("sariabdelrazeq99@gmail.com");
+            onClick={async (e) => {
+              e.preventDefault();
+              try {
+                // Wait for the copy to finish
+                await navigator.clipboard.writeText("sariabdelrazeq99@gmail.com");
+                
+                // Show toast
+                toast.success("Email address copied to clipboard!");
+              } catch (err) {
+                console.error("Failed to copy", err);
+              }
               
-              // Show toast
-              toast.success("Email address copied to clipboard!");
-              
-              // Still attempt to open default mail client
-              window.location.href = "mailto:sariabdelrazeq99@gmail.com?subject=Regarding maneage.com";
+              // Open mail client after a tiny delay so toast can render
+              setTimeout(() => {
+                window.location.href = "mailto:sariabdelrazeq99@gmail.com?subject=Regarding maneage.com";
+              }, 300);
             }}
             style={{
               display: 'inline-flex',
