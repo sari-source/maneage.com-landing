@@ -1,5 +1,6 @@
 import React from 'react';
 import { FlickeringLogoM } from '@/components/FlickeringLogoM';
+import { toast } from 'sonner';
 
 export default function DomainForSale() {
   return (
@@ -84,8 +85,18 @@ export default function DomainForSale() {
             This premium domain name is available for acquisition. Interested parties should reach out below.
           </p>
 
-          <a 
-            href="mailto:sariabdelrazeq99@gmail.com?subject=Regarding maneage.com"
+          <button 
+            type="button"
+            onClick={() => {
+              // Copy to clipboard
+              navigator.clipboard.writeText("sariabdelrazeq99@gmail.com");
+              
+              // Show toast
+              toast.success("Email address copied to clipboard!");
+              
+              // Still attempt to open default mail client
+              window.location.href = "mailto:sariabdelrazeq99@gmail.com?subject=Regarding maneage.com";
+            }}
             style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -98,7 +109,7 @@ export default function DomainForSale() {
               fontSize: '1.125rem',
               padding: '16px 32px',
               borderRadius: '9999px',
-              textDecoration: 'none',
+              border: 'none',
               boxShadow: '0 0 32px rgba(34,197,94,0.3)',
               transition: 'all 0.2s ease',
               cursor: 'pointer'
@@ -117,7 +128,7 @@ export default function DomainForSale() {
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
               <polyline points="22,6 12,13 2,6"/>
             </svg>
-          </a>
+          </button>
         </div>
       </main>
     </div>
