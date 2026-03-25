@@ -4,14 +4,15 @@ import NotFound from "@/pages/NotFound";
 import { Router as WouterRouter, Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import DomainForSale from "./pages/DomainForSale";
+import Home from "./pages/Home";
+import WaitlistPage from "./pages/WaitlistPage";
 
 
 function Router() {
   return (
     <WouterRouter>
       <Switch>
-        <Route path={"/"} component={DomainForSale} />
+        <Route path={"/"} component={Home} />
         {/* Final fallback route */}
         <Route component={NotFound} />
       </Switch>

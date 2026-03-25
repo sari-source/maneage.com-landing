@@ -1,0 +1,49 @@
+[2026-03-19T23:24:37.184Z] {"timestamp":1773962675036,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-03-19T23:24:37.184Z] {"timestamp":1773962675061,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-03-19T23:24:37.184Z] {"timestamp":1773962676624,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-03-19T23:24:37.184Z] {"timestamp":1773962677093,"level":"WARN","args":["Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly."],"stack":null}
+[2026-03-19T23:26:14.929Z] {"timestamp":1773962772856,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-03-19T23:26:14.929Z] {"timestamp":1773962772872,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-03-19T23:26:14.929Z] {"timestamp":1773962773036,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-03-19T23:26:14.929Z] {"timestamp":1773962773421,"level":"WARN","args":["Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly."],"stack":null}
+[2026-03-19T23:26:23.859Z] {"timestamp":1773962781855,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-03-19T23:26:23.859Z] {"timestamp":1773962781862,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-03-19T23:26:23.859Z] {"timestamp":1773962782133,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-03-19T23:26:23.859Z] {"timestamp":1773962782306,"level":"WARN","args":["Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly."],"stack":null}
+[2026-03-19T23:30:24.172Z] {"timestamp":1773963022144,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-03-19T23:30:24.172Z] {"timestamp":1773963022179,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-03-19T23:30:24.172Z] {"timestamp":1773963022466,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-03-19T23:30:24.172Z] {"timestamp":1773963023022,"level":"WARN","args":["Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly."],"stack":null}
+[2026-03-19T23:30:24.850Z] {"timestamp":1773963022605,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-03-19T23:30:24.850Z] {"timestamp":1773963022609,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-03-19T23:30:24.850Z] {"timestamp":1773963023204,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-03-19T23:30:54.671Z] {"timestamp":1773963053347,"level":"WARN","args":["Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly."],"stack":null}
+[2026-03-19T23:31:44.895Z] {"timestamp":1773963104155,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-03-19T23:31:44.895Z] {"timestamp":1773963104156,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FlickeringLogoM.tsx"],"stack":null}
+[2026-03-19T23:31:46.149Z] {"timestamp":1773963104324,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-03-19T23:31:46.149Z] {"timestamp":1773963104326,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FlickeringLogoM.tsx"],"stack":null}
+[2026-03-19T23:34:34.149Z] {"timestamp":1773963274011,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-03-19T23:34:34.841Z] {"timestamp":1773963274007,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-03-19T23:34:41.287Z] {"timestamp":1773963279272,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-03-19T23:34:41.287Z] {"timestamp":1773963279276,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-03-19T23:34:41.287Z] {"timestamp":1773963279656,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-03-19T23:34:41.287Z] {"timestamp":1773963279785,"level":"WARN","args":["Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly."],"stack":null}
+[2026-03-19T23:35:01.585Z] {"timestamp":1773963299569,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-03-19T23:35:01.585Z] {"timestamp":1773963299577,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-03-19T23:35:01.585Z] {"timestamp":1773963299822,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-03-19T23:35:01.585Z] {"timestamp":1773963299921,"level":"WARN","args":["Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly."],"stack":null}
+[2026-03-19T23:36:06.524Z] {"timestamp":1773963364518,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-03-19T23:36:06.524Z] {"timestamp":1773963364528,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-03-19T23:36:06.524Z] {"timestamp":1773963364854,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-03-19T23:36:06.524Z] {"timestamp":1773963364943,"level":"WARN","args":["Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly."],"stack":null}
+[2026-03-19T23:39:39.932Z] {"timestamp":1773963579710,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-03-19T23:39:39.932Z] {"timestamp":1773963579713,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FlickeringLogoM.tsx"],"stack":null}
+[2026-03-19T23:39:43.851Z] {"timestamp":1773963580860,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-03-19T23:39:43.851Z] {"timestamp":1773963580864,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-03-19T23:39:43.851Z] {"timestamp":1773963581056,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-03-19T23:51:20.865Z] {"timestamp":1773964280287,"level":"WARN","args":["Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly."],"stack":null}
+[2026-03-20T00:01:31.546Z] {"timestamp":1773964891206,"level":"LOG","args":["[vite] server connection lost. Polling for restart..."],"stack":null}
+[2026-03-20T00:01:34.143Z] {"timestamp":1773964892138,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-03-20T00:01:34.143Z] {"timestamp":1773964892185,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-03-20T00:01:34.143Z] {"timestamp":1773964892794,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-03-20T00:01:34.143Z] {"timestamp":1773964893414,"level":"WARN","args":["Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly."],"stack":null}
