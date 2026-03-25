@@ -94,7 +94,28 @@ export default function DomainForSale() {
                 await navigator.clipboard.writeText("sariabdelrazeq99@gmail.com");
                 
                 // Show toast
-                toast.success("Email address copied to clipboard!");
+              toast.success("Email address copied to clipboard!", {
+                style: {
+                  background: 'rgba(34, 197, 94, 0.15)',
+                  color: '#22C55E',
+                  border: '1px solid rgba(34, 197, 94, 0.3)',
+                  backdropFilter: 'blur(12px)',
+                  fontFamily: 'DM Sans, sans-serif',
+                  fontWeight: 600,
+                  fontSize: '1rem',
+                  boxShadow: '0 4px 24px rgba(0,0,0,0.4)',
+                },
+                icon: (
+                  <span style={{ 
+                    width: '8px', 
+                    height: '8px', 
+                    borderRadius: '50%', 
+                    background: '#22C55E', 
+                    display: 'inline-block',
+                    boxShadow: '0 0 8px #22C55E'
+                  }} />
+                )
+              });
               } catch (err) {
                 console.error("Failed to copy", err);
               }
