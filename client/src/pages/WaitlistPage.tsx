@@ -74,7 +74,7 @@ export default function WaitlistPage() {
     >
       {/* Back link */}
       <div style={{ width: '100%', maxWidth: '500px', marginBottom: '1.5rem' }}>
-        <Link href="/">
+        <Link href="/landing">
           <a
             style={{
               display: 'inline-flex',
